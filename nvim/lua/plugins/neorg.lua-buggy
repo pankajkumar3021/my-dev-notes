@@ -1,0 +1,32 @@
+return {
+  "nvim-neorg/neorg",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "hrsh7th/nvim-cmp",
+    "nvim-telescope/telescope.nvim",
+  },
+  lazy = false,
+  config = function()
+    require("neorg").setup({
+      load = {
+        ["core.defaults"] = {},
+        ["core.concealer"] = {},
+        ["core.dirman"] = {
+          config = {
+            workspaces = { notes = "~/neorg" },
+            default_workspace = "notes",
+          },
+        },
+        ["core.export"] = {},
+        ["core.completion"] = { config = { engine = "nvim-cmp" } },
+        ["core.integrations.telescope"] = {}, -- key!
+      },
+    })
+  end,
+  keys = {
+    { "<leader>nw", "<cmd>Neorg workspace notes<cr>", desc = "Neorg: Switch to Notes Workspace" },
+    { "<leader>nf", "<cmd>Telescope neorg search_headings<CR>", desc = "Neorg: Search Headings", ft = "norg" },
+    -- more...
+  },
+}
