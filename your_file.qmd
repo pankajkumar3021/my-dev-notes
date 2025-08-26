@@ -1,0 +1,51 @@
+---
+title: "Lending Business Transaction Report"
+author: "Your Name"
+date: "2024-05-13"
+output:
+  revealjs::revealjs_presentation:
+    theme: "black"
+    highlight: haddock
+    transition: "slide"
+    slide_level: 2
+---
+
+# Lending Business Transaction Report
+
+## Overview
+
+This presentation provides an overview of the lending business transactions recorded in the dataset.
+
+## Table of Contents
+
+- [Data Source](#data-source)
+- [Transaction Summary](#transaction-summary)
+- [Borrower Analysis](#borrower-analysis)
+- [Transaction Type Breakdown](#transaction-type-breakdown)
+- [Amount Distribution](#amount-distribution)
+- [Conclusion](#conclusion)
+
+## Data Source
+
+The data used in this presentation is sourced from `your_file.csv`, which contains information on lending transactions.
+
+## Transaction Summary
+
+Insert a table here to summarize the total number of transactions, the total amount received, and the total amount paid.
+
+## Borrower Analysis
+
+Insert a bar chart here to visualize the distribution of transactions by borrower.
+
+## Transaction Type Breakdown
+
+Insert a pie chart here to illustrate the proportion of received and paid transactions.
+
+## Amount Distribution
+
+Insert a histogram here to show the distribution of transaction amounts.
+
+## Conclusion
+
+Provide a summary of the key insights gained from the data analysis.
+
