@@ -31,21 +31,3 @@ The data used in this presentation is sourced from `your_file.csv`, which contai
 
 ## Transaction Summary
 
-Insert a table here to summarize the total number of transactions, the total amount received, and the total amount paid.
-
-## Borrower Analysis
-
-Insert a bar chart here to visualize the distribution of transactions by borrower.
-
-## Transaction Type Breakdown
-
-Insert a pie chart here to illustrate the proportion of received and paid transactions.
-
-## Amount Distribution
-
-Insert a histogram here to show the distribution of transaction amounts.
-
-## Conclusion
-
-Provide a summary of the key insights gained from the data analysis.
-
