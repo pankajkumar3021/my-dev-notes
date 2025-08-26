@@ -4,7 +4,7 @@ author: "Your Name"
 date: "Today's Date"
 output:
   revealjs::revealjs_presentation:
-    theme: "moon"
+    theme: "white"  # Change to 'white' theme
     highlight: haddock
     slide_level: 2
 ---
@@ -15,30 +15,56 @@ This is a presentation for Class 12 Maths students.
 
 ## Learning Objectives
 
-- Understand the basics of [Topic 1]
-- Explore advanced concepts in [Topic 2]
+- Understand the basics of Quadratic Equations
+- Explore advanced concepts in Binomial Theorem
 - Apply mathematical skills to real-world scenarios
 
-# [Topic 1]
+# Quadratic Equations
 
 ## Definition
 
-Explain the concept and provide a clear definition.
+A quadratic equation is a polynomial equation of the second degree, meaning the highest exponent of the variable is 2. The standard form of a quadratic equation is:
+
+$$ax^2 + bx + c = 0$$
+
+where $a$, $b$, and $c$ are constants, and $x$ is the variable.
 
 ## Example
 
-Provide an example with a step-by-step explanation.
+Consider the equation:
 
-# [Topic 2]
+$$3x^2 - 5x + 2 = 0$$
+
+This is a quadratic equation. To solve it, we can use various methods like factoring, completing the square, or using the quadratic formula.
+
+# Binomial Theorem
 
 ## Theory
 
-Discuss the theoretical framework.
+The Binomial Theorem is a formula that allows us to expand expressions of the form $(x + y)^n$, where $n$ is a non-negative integer. It provides a systematic way to find the coefficients of the terms in the expansion.
 
 ## Application
 
-Show how [Topic 2] can be applied in practical situations.
+The Binomial Theorem has applications in various fields, including probability, combinatorics, and calculus. It helps us calculate probabilities, count combinations, and simplify complex expressions.
 
 # Conclusion
 
-Summarize the key takeaways and encourage further exploration.
+In this presentation, we explored the fundamentals of quadratic equations and the Binomial Theorem. We learned about their definitions, solved examples, and discussed their real-world applications.
+
+# Important Concepts
+
+- Quadratic Equations - Understanding the standard form and solving techniques.
+- Binomial Theorem - Expanding binomials and its applications in various mathematical areas.
+
+# Practice Questions
+
+1. What is the solution to the quadratic equation $2x^2 - 7x + 3 = 0$?
+2. Explain the process of completing the square to solve a quadratic equation.
+3. How does the discriminant ($b^2 - 4ac$) help in determining the nature of roots of a quadratic equation?
+4. Provide an example of a quadratic equation with complex roots and explain how to find them.
+5. Apply the Binomial Theorem to expand $(2x + 3)^4$.
+6. What is the coefficient of the $x^3$ term in the expansion of $(x + 2)^5$?
+7. How can the Binomial Theorem be used to calculate probabilities in a coin toss experiment?
+8. Discuss the limitations of the Binomial Theorem when dealing with large exponents.
+9. Provide a real-world scenario where the Binomial Theorem is essential for calculations.
+10. What are some common mistakes students make when applying the Binomial Theorem, and how can they be avoided?
