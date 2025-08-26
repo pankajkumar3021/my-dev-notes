@@ -1,0 +1,44 @@
+---
+title: "Maths Presentation"
+author: "Your Name"
+date: "Today's Date"
+output:
+  revealjs::revealjs_presentation:
+    theme: "moon"
+    highlight: haddock
+    slide_level: 2
+---
+
+# Introduction
+
+This is a presentation for Class 12 Maths students.
+
+## Learning Objectives
+
+- Understand the basics of [Topic 1]
+- Explore advanced concepts in [Topic 2]
+- Apply mathematical skills to real-world scenarios
+
+# [Topic 1]
+
+## Definition
+
+Explain the concept and provide a clear definition.
+
+## Example
+
+Provide an example with a step-by-step explanation.
+
+# [Topic 2]
+
+## Theory
+
+Discuss the theoretical framework.
+
+## Application
+
+Show how [Topic 2] can be applied in practical situations.
+
+# Conclusion
+
+Summarize the key takeaways and encourage further exploration.
