@@ -48,9 +48,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: corteza
-      MYSQL_USER: corteza
-      MYSQL_PASSWORD: corteza
-      MYSQL_ROOT_PASSWORD: corteza_root_password
+      MYSQL_USER: pkumar02dbuser
+      MYSQL_PASSWORD: mvsdbPassw0rd
+      MYSQL_ROOT_PASSWORD: 0netw0three
     ports:
       - "3306:3306"
     volumes:
