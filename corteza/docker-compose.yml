@@ -3,12 +3,13 @@ services:
     image: cortezaproject/corteza:2024.9
     restart: always
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     ports:
       - "18080:80"
     environment:
-      # Database connection for MySQL
-      DB_DSN: "corteza:corteza@tcp(db:3306)/corteza?charset=utf8mb4&parseTime=True&loc=Local"
+      # Database connection for MySQL (using root user)
+      DB_DSN: "root:corteza_root_password@tcp(db:3306)/corteza?charset=utf8mb4&parseTime=True&loc=Local"
       
       # Server configuration
       HTTP_ADDR: 0.0.0.0:80
@@ -26,7 +27,7 @@ services:
       HTTP_API_BASE_URL: /api
       
       # Authentication
-      AUTH_JWT_SECRET: pankajkumar3021pankajkumar30213021
+      AUTH_JWT_SECRET: change-this-to-random-secret-string-min-32-chars
       AUTH_EXTERNAL_ENABLED: "true"
       AUTH_EXTERNAL_REDIRECT_URL: http://localhost:18080/auth/external/{provider}/callback
       
@@ -44,23 +45,25 @@ services:
       - corteza-data:/data
 
   db:
-    image: mysql:8.0
+    image: mariadb:10.11
     restart: always
     environment:
       MYSQL_DATABASE: corteza
-      MYSQL_USER: pkumar02dbuser
-      MYSQL_PASSWORD: mvsdbPassw0rd
-      MYSQL_ROOT_PASSWORD: 0netw0three
+      MYSQL_USER: corteza
+      MYSQL_PASSWORD: corteza
+      MYSQL_ROOT_PASSWORD: corteza_root_password
+      MARIADB_AUTO_UPGRADE: "1"
     ports:
-      - "3306:3306"
+      - "3308:3306"
     volumes:
       - db-data:/var/lib/mysql
-    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "corteza", "-pcorteza"]
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-pcorteza_root_password"]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 10
+      start_period: 30s
 
 volumes:
   corteza-data:
